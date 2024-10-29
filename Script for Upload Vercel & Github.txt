@@ -1,0 +1,71 @@
+Jika kamu ingin menggunakan *Git* untuk mengunggah website undangan pernikahan ke Vercel, berikut langkah-langkah lengkapnya:
+
+---
+
+### *Langkah 1: Persiapan Git dan Node.js*  
+1. *Pastikan Git dan Node.js* sudah terpasang di komputer.  
+   - *Cek Git*:  
+     bash
+     git --version
+     
+   - *Cek Node.js*:  
+     bash
+     node --version
+     
+2. Jika belum terpasang, unduh dan instal dari:
+   - [Git](https://git-scm.com/downloads)
+   - [Node.js](https://nodejs.org)
+
+---
+
+### *Langkah 2: Buat Repositori Git untuk Website*  
+1. Buka *Command Prompt/Terminal* dan arahkan ke folder proyek website kamu:
+   bash
+   cd path/to/website-folder
+   
+2. Inisialisasi Git:
+   bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   
+   Ini akan membuat repositori lokal dan menyimpan perubahan awal.
+
+---
+
+### *Langkah 3: Hubungkan Git dengan GitHub*  
+1. *Buat repositori baru di GitHub* dengan mengunjungi [github.com](https://github.com).
+2. Salin *URL repositori GitHub* (misalnya https://github.com/username/namaproject.git).
+3. Kembali ke Terminal dan hubungkan repositori lokal dengan GitHub:
+   bash
+   git remote add origin https://github.com/cumansabun/Wedding-of-Abil-Ambar.git
+   git branch -M main
+   git push -u origin main
+   
+
+---
+
+### *Langkah 4: Hubungkan dan Deploy dari Vercel*  
+1. *Login ke Vercel* di [vercel.com](https://vercel.com).
+2. Di dashboard Vercel, klik *"New Project"*.
+3. *Hubungkan akun GitHub* kamu dengan Vercel jika belum terhubung.
+4. Pilih *repositori GitHub* yang baru saja kamu buat dan klik *"Import"*.
+5. Vercel akan mendeteksi bahwa proyek kamu berbasis *HTML (statis). Klik *"Deploy"**.
+
+---
+
+### *Langkah 5: Verifikasi dan Sebarkan Link*  
+1. Setelah proses deploy selesai, kamu akan diberikan *URL publik* seperti:
+   
+   https://namaproject.vercel.app
+   
+2. Kunjungi link tersebut untuk memastikan website undangan kamu tampil dengan benar.
+3. *Bagikan URL* kepada tamu undangan!
+
+---
+
+### *Tahap Lanjutan (Opsional)*  
+- *Update otomatis:* Setiap kali kamu melakukan perubahan di kode dan melakukan git push, Vercel akan *otomatis deploy* versi terbaru.
+- *Custom domain:* Tambahkan domain khusus di *Settings > Domains* di dashboard Vercel.
+
+Dengan Git, kamu bisa dengan mudah mengelola versi dan memperbarui website kapan saja, serta memanfaatkan *fitur otomatisasi* dari Vercel untuk continuous deployment.
